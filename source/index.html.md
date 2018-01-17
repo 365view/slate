@@ -16,7 +16,7 @@ search: true
 
 # Introduction
 
-Welcome to the 365View API! You can use our API to access 36View API endpoints, which can be used to interact with the 365View repository or your administered platforms through the 365View connectors.
+Welcome to the 365View API mother fucker! You can use our API to access 36View API endpoints, which can be used to interact with the 365View repository or your administered platforms through the 365View connectors.
 
 We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
 
