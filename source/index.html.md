@@ -16,7 +16,7 @@ search: true
 
 # Introduction
 
-Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.
+Welcome to the 365View API! You can use our API to access 36View API endpoints, which can be used to interact with the 365View repository or your administered platforms through the 365View connectors.
 
 We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
 
@@ -50,7 +50,7 @@ const kittn = require('kittn');
 let api = kittn.authorize('meowmeowmeow');
 ```
 
-> Make sure to replace `meowmeowmeow` with your API key.
+> Make sure to replace `meowmeowmeow` with your API key. Oui très bien
 
 Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our [developer portal](http://example.com/developers).
 
