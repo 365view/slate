@@ -19,7 +19,7 @@ search: true
 
 # Introduction
 
-Welcome to the 365View API! You can use our API to access 36View API endpoints, which can be used to interact with the 365View repository or your administered platforms through the 365View connectors.
+Welcome to the 365View API beta! You can use our API to access 36View API endpoints, which can be used to interact with the 365View repository or your administered platforms through the 365View connectors.
 
 
 
@@ -238,4 +238,3 @@ This endpoint deletes a specific kitten.
 Parameter | Description
 --------- | -----------
 ID | The ID of the kitten to delete
-
