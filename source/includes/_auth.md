@@ -224,6 +224,8 @@ reset | boolean | Flag indicating the password is to be reset. Either triggered 
 
 ## Connector information
 
+Retrieve informations on the connector.
+
 ### HTTP request
 
 `GET /login`
@@ -268,6 +270,8 @@ This method allows you to retrieve a prefilled JSON to log into a connector. You
 
 > Example JSON object to login as the user <bold>Administrator</bold> with the encrypted password <bold>365admin</bold>
 
+This method allows to login to a connector. 
+
 ### HTTP request
 
 `POST /login/:locale`
@@ -281,6 +285,13 @@ locale | en_EN | The client's locale.
 ### Request content
 
 A login object as encrypted JSON
+
+### Return values
+
+HTTP code | body | description
+----------|------|------------
+200 | | 
+500 | | Login failed. See the message for details on the actual error.
 
 ## logoff
 
