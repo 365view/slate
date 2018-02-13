@@ -1,8 +1,10 @@
 # Menu
 
+In this category you will find information about the connector menu and how to retrieve the menu from a connector.
+
 ## The menu object
 
-This object wraps all the categories and items of the menubar.
+This object contains the top level structure of the sidebar menu. It wraps the three categories _actors_, _resources_ and _security_.
 
 > An example of JSON for the menu.
 
@@ -32,7 +34,7 @@ menuSecurity | MenuCategory | Contains menu items related to security | yes
 
 An object that contains multiple menu items.
 
-> An example of category actor 
+> Example of category actor.
 
 ```json
 {
@@ -117,7 +119,7 @@ parts.translate | boolean | A flag indicating whether the chunk must be translat
 
 ## Get Menu
 
-Retrieve the menu.
+Retrieve the menu structure for the current connector.
 
 ### HTTP request
 
@@ -127,4 +129,8 @@ Retrieve the menu.
 
 Parameter | Default | Description
 ----------|---------|------------
-sessionId | - | The active session.
+sessionId | - | The active session
+
+### Response
+
+The menu as a JSON object of [Menu](#the-menu-object) type.
