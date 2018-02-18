@@ -23,3 +23,5 @@ search: true
 Welcome to the 365View API beta! You can use our API to access 36View API endpoints, which can be used to interact with the 365View repository or your administered platforms through the 365View connectors.
 
 This API documentation page was created with [Slate](https://github.com/lord/slate).
+
+<aside class="success">Most exchange with connectors are made through JSON objects. The type of object is defined by the field *kind* and each method only accepts certain kinds. Each connector must indicate for each method the accepted kinds.</aside>

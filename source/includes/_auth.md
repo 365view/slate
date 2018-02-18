@@ -1,6 +1,8 @@
 # Authentication
 
-In this category you will find information about the login object and methods related to login and session management.
+To use a 365View connector you must first log into it. Login information vary from connector to connector as they may require additionnal properties to acces the platform.
+
+In this section we will only cover the basics of authentication in 365View and leaves connector-specific information to the connectors' section.
 
 ## The login object
 
@@ -15,6 +17,8 @@ In this category you will find information about the login object and methods re
     }
 }
 ```
+
+> Minimal JSON necessary to login to a connector.
 
 <!-- #region -->
 
@@ -202,17 +206,23 @@ public class Password {
 
 <!-- #endregion -->
 
+This object allows a client to login to a connector by sending the correct authentication informations.
+
+<aside class="notice">Some connectors may require additionnal fields to authenticate. Make sure to read the login section related to the connector you want to log into.</aside>
+
 ### Attributes
 
 Attribute | type | Description  | mandatory
 ----------|------|--------------|----------
 kind | string | Must be _login_ | true
-title | string | The username you're logging with | true
+title | string | The username you are logging with | true
 password | Password | The password | true
 
 ### Password
 
 The password object is a nested object within the login.
+
+<aside class="notice">Password values are encrypted using DES. You should make sure to use the proper encryption otherwise password validation will fail.</aside>
 
 Attribute | type | Description  | mandatory
 ----------|------|--------------|----------
@@ -220,11 +230,9 @@ value | string | The password value, encrypted. | true
 former | string | The former password, used in the event a user wants to change its password. | false
 reset | boolean | Flag indicating the password is to be reset. Either triggered by the user or an admin | false
 
-<aside class="warning">Some connectors may require additionnal fields to authenticate. Depending on the connector login will fail if one or more specific field are not present.</aside>
-
 ## Connector information
 
-Retrieve informations on the connector.
+Generate a random session id.
 
 ### HTTP request
 
@@ -247,7 +255,7 @@ Retrieve informations on the connector.
 
 > Example of JSON returned
 
-This method allows you to retrieve a prefilled JSON to log into a connector. You can then fill the required fields and use the resulting object to log into the connector.
+This method allows you to retrieve a prefilled JSON to log into a connector. You can then fill the required fields with the correct values to login to the connector.
 
 ### HTTP request
 
@@ -270,7 +278,7 @@ This method allows you to retrieve a prefilled JSON to log into a connector. You
 
 > Example JSON object to login as the user <bold>Administrator</bold> with the encrypted password <bold>365admin</bold>
 
-This method allows to login to a connector. 
+This method allows to login to a connector. You send a login object and retrieve a session id you can pass with further requests until the session is manually closed or expires.
 
 ### HTTP request
 
@@ -284,16 +292,18 @@ locale | en_EN | The client's locale.
 
 ### Request content
 
-A login object as encrypted JSON
+A login object as encrypted JSON.
 
 ### Return values
 
 HTTP code | body | description
 ----------|------|------------
-200 | | 
+200 | | A session id as a string.
 500 | | Login failed. See the message for details on the actual error.
 
 ## logoff
+
+Close an active session.
 
 ### HTTP request
 
