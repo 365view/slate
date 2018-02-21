@@ -11,9 +11,18 @@ toc_footers:
   - <a href='https://github.com/lord/slate' target='_blank'>Documentation Powered by Slate</a>
 
 includes:
-  - auth
-  - menu
-  - errors
+# Common pages go here
+  - core/auth
+  - core/menu
+  - core/generic
+  - core/errors
+# Add the connector pages here. Ordering matters
+# 365 repo
+  - 365/intro
+  - 365/auth
+# Ora 12
+  - ora12/intro
+  - ora12/auth
 
 search: true
 ---
